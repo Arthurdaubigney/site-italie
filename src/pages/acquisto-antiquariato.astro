@@ -8,7 +8,7 @@ import CtaBand from '../components/CtaBand.astro';
 import { ZONES } from '../data/site';
 const faq = [
   { q: 'Quali oggetti acquistate?', a: 'Dipinti antichi e dell’Ottocento, mobili d’epoca, argenti, bronzi, sculture, orologi, tappeti, libri antichi e oggetti da collezione, anche in blocco.' },
-  { q: 'Devo portare io le opere in galleria?', a: 'No. Dopo la valutazione sulle fotografie possiamo organizzare un sopralluogo e il ritiro a domicilio in Lombardia e nel Nord Italia.' },
+  { q: 'Devo portare io le opere in galleria?', a: 'No. Dopo la valutazione sulle fotografie possiamo organizzare un sopralluogo e il ritiro a domicilio in tutta Italia.' },
   { q: 'Quanto tempo serve per ricevere una risposta?', a: 'Rispondiamo alle richieste di stima il prima possibile, di norma entro pochi giorni lavorativi.' },
   { q: 'Posso vendere l’intera eredità di famiglia?', a: 'Sì, valutiamo anche interi nuclei ereditari, selezionando i pezzi di maggior interesse con discrezione e rispetto.' },
 ];
@@ -61,7 +61,7 @@ const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: f
         <li>Intere collezioni ed eredità</li>
         <li>Svuotamento di ville e appartamenti d’epoca</li>
       </ul>
-      <h3 style="margin-top:56px" class="reveal">Ritiro a domicilio nelle zone</h3>
+      <h3 style="margin-top:56px" class="reveal">Ci spostiamo in tutta Italia</h3>
       <ul class="zones reveal">{ZONES.map((z) => <li>{z}</li>)}</ul>
     </div>
   </section>

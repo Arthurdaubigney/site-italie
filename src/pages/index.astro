@@ -14,7 +14,7 @@ const faqLd = {
 ---
 <Base
   title="Galleria d’Antiquariato a Milano | Stima e Acquisto Opere"
-  description="Galleria d’antiquariato a Milano: stima gratuita, perizie e acquisto di dipinti, mobili antichi, argenti e opere d’arte. Ritiro a domicilio in Lombardia."
+  description="Galleria d’antiquariato a Milano: stima gratuita, perizie e acquisto di dipinti, mobili antichi, argenti e opere d’arte. Ritiro a domicilio in tutta Italia."
   jsonLd={[faqLd]}
 >
   <section class="hero">
@@ -24,7 +24,7 @@ const faqLd = {
     <div class="wrap">
       <span class="eyebrow">Antiquariato · Milano</span>
       <h1>Galleria d’Antiquariato a Milano: <em>stima, perizie</em> e acquisto di opere d’arte</h1>
-      <p class="lead">Acquistiamo, valutiamo e vendiamo dipinti, mobili antichi, argenti, bronzi e oggetti da collezione di pregio. Con discrezione, competenza e ritiro a domicilio.</p>
+      <p class="lead">Acquistiamo, valutiamo e vendiamo dipinti, mobili antichi, argenti, bronzi e oggetti da collezione di pregio. Stima e spostamento gratuiti, a casa tua, in tutta Italia.</p>
       <div class="actions">
         <Cta variant="gold" />
         <Cta kind="valutazione" variant="ghost-light" />
@@ -32,7 +32,7 @@ const faqLd = {
       <ul class="hero-facts">
         <li>Stima gratuita</li>
         <li>Ritiro a domicilio</li>
-        <li>Lombardia e Nord Italia</li>
+        <li>Spostamenti in tutta Italia</li>
       </ul>
     </div>
   </section>
@@ -46,7 +46,7 @@ const faqLd = {
       <ol class="services reveal">
         <li class="service"><span class="num">01</span><h3>Acquisto</h3><p>Acquistiamo opere d’arte, antiquariato e collezioni, anche in blocco, con pagamento tracciabile.</p></li>
         <li class="service"><span class="num">02</span><h3>Stima e perizia</h3><p>Valutazione gratuita su fotografie e perizia in presenza per i pezzi di maggior interesse.</p></li>
-        <li class="service"><span class="num">03</span><h3>Ritiro a domicilio</h3><p>Sopralluogo, imballaggio e trasporto in sicurezza in tutta la Lombardia e nel Nord Italia.</p></li>
+        <li class="service"><span class="num">03</span><h3>Ritiro a domicilio</h3><p>Sopralluogo, imballaggio e trasporto in sicurezza, in tutta Italia.</p></li>
         <li class="service"><span class="num">04</span><h3>Vendita</h3><p>Una selezione di opere e arredi scelti per qualità, stato di conservazione e storia.</p></li>
       </ol>
     </div>
@@ -61,7 +61,7 @@ const faqLd = {
         <div class="promise-text">
           <span class="eyebrow">Gratuito e senza impegno</span>
           <h3>Stima e spostamento gratuiti</h3>
-          <p>Approfitta di una stima gratuita, a domicilio e senza impegno.</p>
+          <p>Approfitta di una stima gratuita, a domicilio e senza impegno: ci spostiamo noi, <strong>in tutta Italia</strong>.</p>
           <p>Ti garantiamo una valutazione onesta, in totale trasparenza. Avrai un accompagnamento personalizzato e consigli sinceri, in tutta fiducia.</p>
           <div class="actions"><Cta variant="default" label="Richiedi la stima gratuita" /></div>
         </div>
@@ -71,7 +71,7 @@ const faqLd = {
         <div class="promise-text">
           <span class="eyebrow">Veniamo da te</span>
           <h3>Acquisti a domicilio</h3>
-          <p>Acquistiamo i tuoi oggetti direttamente a casa tua, con la massima discrezione e trasparenza.</p>
+          <p>Acquistiamo i tuoi oggetti direttamente a casa tua, <strong>in tutta Italia</strong>, con la massima discrezione e trasparenza.</p>
           <p>Ogni offerta è formulata con cura, in base al valore reale dei tuoi beni, per garantirti una transazione giusta, rapida e di fiducia.</p>
           <p>La nostra priorità è offrirti un servizio affidabile, semplice e adatto alle tue esigenze.</p>
           <div class="actions"><Cta variant="default" href="/acquisto-antiquariato/" label="Come funziona" /></div>
@@ -137,14 +137,15 @@ const faqLd = {
     </div>
   </section>
 
-  <section class="section" aria-labelledby="zone-t">
+  <section class="section section--navy italia" aria-labelledby="zone-t">
     <div class="wrap">
-      <div class="section-head reveal">
+      <div class="section-head center reveal">
         <span class="eyebrow">Dove operiamo</span>
-        <h2 id="zone-t">Da Milano in tutto il Nord Italia</h2>
-        <p class="lead">Veniamo noi da te: sopralluogo, stima e ritiro a domicilio senza che tu debba muovere nulla.</p>
+        <h2 id="zone-t">Ci spostiamo in <em class="gold">tutta Italia</em></h2>
+        <p class="lead">Da Milano a Palermo, da Torino a Bari: veniamo noi da te per stima, sopralluogo e ritiro, senza alcun costo di spostamento.</p>
       </div>
       <ul class="zones reveal">{ZONES.map((z) => <li>{z}</li>)}</ul>
+      <div class="actions reveal" style="justify-content:center"><Cta variant="gold" /></div>
     </div>
   </section>
 

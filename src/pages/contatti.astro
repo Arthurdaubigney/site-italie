@@ -6,7 +6,7 @@ import { SITE } from '../data/site';
 ---
 <Base
   title="Contatti e Richiesta Stima Gratuita | Galleria Antica Milano"
-  description="Contatta la Galleria Antica di Milano: richiedi una stima gratuita di opere d’arte e antiquariato chiamando o scrivendo. Ritiro a domicilio in Lombardia."
+  description="Contatta la Galleria Antica di Milano: richiedi una stima gratuita di opere d’arte e antiquariato chiamando o scrivendo. Ritiro a domicilio in tutta Italia."
   ogImage="gallery-wall"
   crumbs={[{ name: 'Contatti', href: '/contatti/' }]}
 >
@@ -26,7 +26,7 @@ import { SITE } from '../data/site';
           <div><dt>Orari</dt><dd>{SITE.hours}</dd></div>
           <div><dt>Email</dt><dd><a href={`mailto:${SITE.email}`}>{SITE.email}</a></dd></div>
           {SITE.phone && <div><dt>Telefono</dt><dd><a href={`tel:${SITE.phone.replace(/\s/g, '')}`}>{SITE.phone}</a></dd></div>}
-          <div><dt>Zone servite</dt><dd>Milano, Lombardia e Nord Italia, con ritiro a domicilio.</dd></div>
+          <div><dt>Zone servite</dt><dd>Tutta Italia: ci spostiamo noi, gratuitamente.</dd></div>
         </dl>
       </aside>
     </div>

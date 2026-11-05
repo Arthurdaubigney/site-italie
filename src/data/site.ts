@@ -54,7 +54,7 @@ export const CATEGORIES: Category[] = [
     alt: 'Dipinto antico a olio raffigurante un paesaggio pastorale con alberi e gregge',
     title: 'Dipinti antichi a Milano | Galleria Antica',
     description:
-      'Acquisto, stima e vendita di dipinti antichi a Milano: olii su tela e tavola, paesaggi, ritratti e scene storiche. Perizia e ritiro a domicilio in Lombardia.',
+      'Acquisto, stima e vendita di dipinti antichi a Milano: olii su tela e tavola, paesaggi, ritratti e scene storiche. Perizia e ritiro a domicilio in tutta Italia.',
     h1: 'Dipinti antichi a Milano: acquisto, stima e vendita',
     lead: 'Paesaggi, ritratti, scene di genere e soggetti sacri: la Galleria seleziona e valuta dipinti antichi con occhio attento a qualità, stato di conservazione e provenienza.',
     body: [
@@ -81,7 +81,7 @@ export const CATEGORIES: Category[] = [
     alt: 'Poltroncina capitonné con gambe tornite, esempio di seduta di gusto classico',
     title: 'Mobili antichi a Milano: stima e acquisto | Galleria Antica',
     description:
-      'Valutiamo e acquistiamo mobili antichi a Milano e in Lombardia: commode, consolle, tavoli, sedute e arredi d’epoca. Stima gratuita e ritiro a domicilio.',
+      'Valutiamo e acquistiamo mobili antichi a Milano e in tutta Italia: commode, consolle, tavoli, sedute e arredi d’epoca. Stima gratuita e ritiro a domicilio.',
     h1: 'Mobili antichi a Milano: stima, acquisto e vendita',
     lead: 'Commode, credenze, consolle, tavoli, sedute e arredi d’epoca: mobili che uniscono ebanisteria, materiali pregiati e carattere.',
     body: [
@@ -92,7 +92,7 @@ export const CATEGORIES: Category[] = [
     faq: [
       {
         q: 'Ritirate mobili ingombranti a domicilio?',
-        a: 'Sì, in tutta la Lombardia e nel Nord Italia. Dopo la stima concordiamo data, imballaggio e trasporto.',
+        a: 'Sì, in tutta Italia. Dopo la stima concordiamo data, imballaggio e trasporto.',
       },
       {
         q: 'Un mobile restaurato mantiene valore?',
@@ -108,7 +108,7 @@ export const CATEGORIES: Category[] = [
     alt: 'Dettaglio di una scultura classica in marmo con volto e spalla in primo piano',
     title: 'Argenti e bronzi antichi a Milano | Galleria Antica',
     description:
-      'Compriamo e valutiamo argenti, bronzi e sculture antiche a Milano. Perizia di punzoni e firme, stima gratuita e ritiro a domicilio in Lombardia e Nord Italia.',
+      'Compriamo e valutiamo argenti, bronzi e sculture antiche a Milano. Perizia di punzoni e firme, stima gratuita e ritiro a domicilio in tutta Italia.',
     h1: 'Argenti, bronzi e sculture antiche: stima e acquisto a Milano',
     lead: 'Argenteria da tavola, centrotavola, bronzi, marmi e sculture: oggetti in cui la materia e la mano dell’artigiano si leggono a colpo d’occhio.',
     body: [
@@ -135,7 +135,7 @@ export const CATEGORIES: Category[] = [
     alt: 'Orologio da tasca antico appeso a una catena con sfondo sfocato',
     title: 'Orologi antichi e oggetti da collezione a Milano',
     description:
-      'Valutazione e acquisto di orologi da tasca, pendole e oggetti da collezione a Milano. Stima gratuita, perizia in galleria e ritiro a domicilio in Lombardia.',
+      'Valutazione e acquisto di orologi da tasca, pendole e oggetti da collezione a Milano. Stima gratuita, perizia in galleria e ritiro a domicilio in tutta Italia.',
     h1: 'Orologi antichi e oggetti da collezione: valutazione a Milano',
     lead: 'Orologi da tasca, pendole, strumenti scientifici e piccoli oggetti da collezione: pezzi che il tempo ha reso preziosi.',
     body: [
@@ -162,7 +162,7 @@ export const CATEGORIES: Category[] = [
     alt: 'Tappeto antico arrotolato con motivi decorativi e frange',
     title: 'Tappeti antichi e tessili d’epoca a Milano | Galleria Antica',
     description:
-      'Stima e acquisto di tappeti antichi, arazzi e tessili d’epoca a Milano. Valutazione gratuita su fotografie e ritiro a domicilio in Lombardia e Nord Italia.',
+      'Stima e acquisto di tappeti antichi, arazzi e tessili d’epoca a Milano. Valutazione gratuita su fotografie e ritiro a domicilio in tutta Italia.',
     h1: 'Tappeti antichi, arazzi e tessili d’epoca a Milano',
     lead: 'Tappeti orientali annodati a mano, arazzi e tessuti d’epoca: trame che uniscono arte decorativa e artigianato.',
     body: [
@@ -189,7 +189,7 @@ export const CATEGORIES: Category[] = [
     alt: 'Dipinto ottocentesco di una donna in abito popolare con brocca davanti a un muro',
     title: 'Opere d’arte e sculture: stima e acquisto a Milano',
     description:
-      'Acquistiamo e valutiamo opere d’arte, dipinti dell’Ottocento e sculture a Milano. Stima gratuita, perizia in galleria e ritiro a domicilio in Lombardia.',
+      'Acquistiamo e valutiamo opere d’arte, dipinti dell’Ottocento e sculture a Milano. Stima gratuita, perizia in galleria e ritiro a domicilio in tutta Italia.',
     h1: 'Opere d’arte e sculture dell’Ottocento e del Novecento a Milano',
     lead: 'Dipinti figurativi, scene di genere, sculture e opere d’arte tra Ottocento e Novecento: una selezione con attenzione alla qualità e alla storia di ogni pezzo.',
     body: [
@@ -221,7 +221,7 @@ export const FAQ_HOME = [
   },
   {
     q: 'Venite a casa a ritirare le opere?',
-    a: 'Sì, a Milano, in tutta la Lombardia e nel Nord Italia. Concordiamo giorno e orario, e ci occupiamo di imballaggio e trasporto in sicurezza.',
+    a: 'Sì, in tutta Italia, senza alcun costo di spostamento. Concordiamo giorno e orario, e ci occupiamo di imballaggio e trasporto in sicurezza.',
   },
   {
     q: 'Come vengo pagato se vendo alla Galleria?',
@@ -233,4 +233,4 @@ export const FAQ_HOME = [
   },
 ];
 
-export const ZONES = ['Milano e provincia', 'Brianza e Como', 'Bergamo e Brescia', 'Pavia e Lodi', 'Piemonte', 'Veneto ed Emilia-Romagna'];
+export const ZONES = ['Milano e Lombardia', 'Torino e Piemonte', 'Veneto e Triveneto', 'Emilia-Romagna e Toscana', 'Roma e Lazio', 'Sud Italia e Isole'];
