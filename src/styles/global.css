@@ -268,3 +268,17 @@ a:hover .frame img, .frame:hover img { transform: scale(1.035); }
 .contact-tile:hover .go { transform: translateX(5px); }
 .contact-note { margin: 4px 0 0; font-size: 0.95rem; color: var(--muted); }
 @media (max-width: 520px) { .contact-tile { grid-template-columns: 44px 1fr; } .contact-tile .go { display: none; } .contact-tile .ico { width: 44px; height: 44px; } }
+
+/* Téléphone dans le bandeau */
+.nav-tel { gap: 10px; letter-spacing: 0.08em; }
+.nav-tel svg { width: 16px; height: 16px; }
+.nav-tel:hover svg { transform: none; }
+.nav-cta, .tel-icon { display: none; }
+@media (max-width: 1180px) {
+  .tel-icon { display: grid; place-items: center; width: 44px; height: 44px; margin-left: auto; border: 1px solid var(--gold); color: var(--gold-d); transition: background 0.3s, color 0.3s; }
+  .tel-icon:hover { background: var(--gold); color: var(--navy); }
+  .tel-icon svg { width: 20px; height: 20px; }
+  .nav-cta { display: block; } .nav-cta .btn { width: 100%; margin-top: 12px; }
+  .nav-tel { margin-top: 24px; }
+}
+@media (max-width: 380px) { .brand-text { font-size: 1.1rem; letter-spacing: 0.16em; } }
