@@ -269,20 +269,19 @@ a:hover .frame img, .frame:hover img { transform: scale(1.035); }
 .contact-note { margin: 4px 0 0; font-size: 0.95rem; color: var(--muted); }
 @media (max-width: 520px) { .contact-tile { grid-template-columns: 44px 1fr; } .contact-tile .go { display: none; } .contact-tile .ico { width: 44px; height: 44px; } }
 
-/* Téléphone dans le bandeau */
-.nav a.nav-tel { display: inline-flex; align-items: center; gap: 8px; font: 600 0.8125rem/1 var(--sans); letter-spacing: 0.06em; white-space: nowrap; color: var(--ink); }
-.nav-tel svg { width: 16px; height: 16px; color: var(--gold-d); flex: none; }
-.nav a.nav-tel::after { display: none; }
-.nav a.nav-tel:hover { color: var(--gold-d); }
+/* Bandeau supérieur (contacts) */
+.topbar { background: var(--navy); color: rgba(246, 242, 234, 0.86); font: 500 0.78rem/1 var(--sans); letter-spacing: 0.08em; }
+.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 42px; }
+.topbar-note { margin: 0; text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.7rem; color: var(--gold-lt); }
+.topbar-links { display: flex; align-items: center; gap: 28px; }
+.topbar a { white-space: nowrap; display: inline-flex; align-items: center; gap: 9px; padding: 12px 0; position: relative; transition: color 0.3s; }
+.topbar a svg { width: 14px; height: 14px; color: var(--gold-lt); flex: none; }
+.topbar a::after { content: ''; position: absolute; left: 0; right: 0; bottom: 8px; height: 1px; background: var(--gold-lt); transform: scaleX(0); transform-origin: left; transition: transform 0.4s var(--ease); }
+.topbar a:hover { color: #fff; }
+.topbar a:hover::after { transform: scaleX(1); }
+.topbar-links a:first-child { font-weight: 600; font-size: 0.84rem; color: var(--ivory); letter-spacing: 0.1em; }
+@media (max-width: 760px) { .topbar .topbar-note, .topbar .topbar-mail { display: none; } .topbar .wrap { justify-content: center; min-height: 40px; } }
 .nav-cta { display: block; }
-.tel-icon { display: none; }
-@media (min-width: 1280px) { .nav { gap: 22px; } .brand { margin-right: 12px; } }
-@media (min-width: 1280px) and (max-width: 1400px) { .nav { gap: 16px; } .nav a:not(.btn):not(.nav-tel) { font-size: 0.75rem; letter-spacing: 0.08em; } }
-@media (max-width: 1279px) {
-  .tel-icon { display: grid; place-items: center; width: 44px; height: 44px; margin-left: auto; border: 1px solid var(--gold); color: var(--gold-d); transition: background 0.3s, color 0.3s; }
-  .tel-icon:hover { background: var(--gold); color: var(--navy); }
-  .tel-icon svg { width: 20px; height: 20px; }
-  .nav a.nav-tel { padding: 18px 0; border-bottom: 1px solid var(--line); font-size: 1rem; }
-  .nav-cta .btn { width: 100%; margin-top: 24px; }
-}
+@media (min-width: 1280px) { .nav { gap: 30px; } }
+@media (max-width: 1279px) { .nav-cta .btn { width: 100%; margin-top: 24px; } }
 @media (max-width: 380px) { .brand-text { font-size: 1.1rem; letter-spacing: 0.16em; } }
