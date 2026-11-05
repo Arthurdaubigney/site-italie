@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import Img from '../components/Img.astro';
 import Cta from '../components/Cta.astro';
 import Faq from '../components/Faq.astro';
-import TallyForm from '../components/TallyForm.astro';
+import ContactBlock from '../components/ContactBlock.astro';
 import { CATEGORIES, FAQ_HOME, ZONES } from '../data/site';
 
 const faqLd = {
@@ -26,7 +26,7 @@ const faqLd = {
       <h1>Galleria d’Antiquariato a Milano: <em>stima, perizie</em> e acquisto di opere d’arte</h1>
       <p class="lead">Acquistiamo, valutiamo e vendiamo dipinti, mobili antichi, argenti, bronzi e oggetti da collezione di pregio. Con discrezione, competenza e ritiro a domicilio.</p>
       <div class="actions">
-        <Cta variant="gold" href="#stima" />
+        <Cta variant="gold" />
         <Cta kind="valutazione" variant="ghost-light" />
       </div>
       <ul class="hero-facts">
@@ -49,6 +49,34 @@ const faqLd = {
         <li class="service"><span class="num">03</span><h3>Ritiro a domicilio</h3><p>Sopralluogo, imballaggio e trasporto in sicurezza in tutta la Lombardia e nel Nord Italia.</p></li>
         <li class="service"><span class="num">04</span><h3>Vendita</h3><p>Una selezione di opere e arredi scelti per qualità, stato di conservazione e storia.</p></li>
       </ol>
+    </div>
+  </section>
+
+
+  <section class="section section--paper promises" aria-labelledby="promesse-t">
+    <div class="wrap">
+      <h2 id="promesse-t" class="visually-hidden">Stima gratuita e acquisti a domicilio</h2>
+      <article class="promise reveal" id="stima-gratuita">
+        <div class="split-media"><div class="frame"><Img name="watch" sizes="(min-width: 860px) 40vw, 100vw" alt="Orologio da tasca antico appeso a una catena, esempio di oggetto da stimare" title="Stima gratuita di orologi e oggetti antichi" /></div></div>
+        <div class="promise-text">
+          <span class="eyebrow">Gratuito e senza impegno</span>
+          <h3>Stima e spostamento gratuiti</h3>
+          <p>Approfitta di una stima gratuita, a domicilio e senza impegno.</p>
+          <p>Ti garantiamo una valutazione onesta, in totale trasparenza. Avrai un accompagnamento personalizzato e consigli sinceri, in tutta fiducia.</p>
+          <div class="actions"><Cta variant="default" label="Richiedi la stima gratuita" /></div>
+        </div>
+      </article>
+      <article class="promise promise--flip reveal" id="acquisti-a-domicilio">
+        <div class="split-media"><div class="frame"><Img name="carpet" sizes="(min-width: 860px) 40vw, 100vw" alt="Tappeto antico arrotolato, pronto per il ritiro a domicilio" title="Acquisti a domicilio di tappeti e arredi antichi" /></div></div>
+        <div class="promise-text">
+          <span class="eyebrow">Veniamo da te</span>
+          <h3>Acquisti a domicilio</h3>
+          <p>Acquistiamo i tuoi oggetti direttamente a casa tua, con la massima discrezione e trasparenza.</p>
+          <p>Ogni offerta è formulata con cura, in base al valore reale dei tuoi beni, per garantirti una transazione giusta, rapida e di fiducia.</p>
+          <p>La nostra priorità è offrirti un servizio affidabile, semplice e adatto alle tue esigenze.</p>
+          <div class="actions"><Cta variant="default" href="/acquisto-antiquariato" label="Come funziona" /></div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -81,7 +109,7 @@ const faqLd = {
         <span class="eyebrow">Vendi con noi</span>
         <h2 id="vendi-t">Vendere antiquariato a Milano, in tre passi</h2>
         <ol class="steps">
-          <li><div><strong>Invia le fotografie</strong><span>Compila il modulo allegando foto dell’opera, dei dettagli e delle firme.</span></div></li>
+          <li><div><strong>Invia le fotografie</strong><span>Chiamaci o scrivici allegando foto dell’opera, dei dettagli e delle firme.</span></div></li>
           <li><div><strong>Ricevi la stima</strong><span>Ti rispondiamo con una prima valutazione gratuita e, se serve, fissiamo una visita.</span></div></li>
           <li><div><strong>Ritiro e pagamento</strong><span>Se accetti la proposta, ritiriamo l’opera a domicilio e concordiamo il pagamento.</span></div></li>
         </ol>
@@ -135,9 +163,9 @@ const faqLd = {
       <div class="section-head center reveal">
         <span class="eyebrow">Richiedi una stima</span>
         <h2 id="stima-t">Raccontaci della tua opera</h2>
-        <p class="lead" style="margin-inline:auto">Bastano pochi minuti. Rispondiamo a ogni richiesta con una prima indicazione gratuita.</p>
+        <p class="lead" style="margin-inline:auto">Una telefonata o un’email bastano. Rispondiamo a ogni richiesta con una prima indicazione gratuita.</p>
       </div>
-      <div class="reveal" style="max-width:860px;margin-inline:auto"><TallyForm id="stima" /></div>
+      <div class="reveal" id="stima" style="max-width:860px;margin-inline:auto"><ContactBlock /></div>
     </div>
   </section>
 </Base>

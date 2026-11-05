@@ -198,12 +198,7 @@ a:hover .frame img, .frame:hover img { transform: scale(1.035); }
 .cta-band .actions { justify-content: center; }
 
 /* Tally */
-.tally { background: var(--paper); border: 1px solid var(--line); padding: clamp(20px, 3vw, 40px); position: relative; }
-.tally::before { content: ''; position: absolute; left: -1px; top: -1px; width: 56px; height: 3px; background: var(--gold); }
-.tally iframe { width: 100%; min-height: 560px; border: 0; display: block; }
-.tally-placeholder { min-height: 360px; display: grid; place-items: center; text-align: center; border: 1px dashed var(--gold); padding: 40px 24px; color: var(--muted); }
-.tally-placeholder strong { display: block; font: 500 1.6rem/1.2 var(--serif); color: var(--ink); margin-bottom: 10px; }
-.tally-placeholder code { font-size: 0.85rem; background: var(--sand); padding: 2px 8px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* Contact */
 .contact-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(32px, 5vw, 72px); align-items: start; }
@@ -237,7 +232,7 @@ a:hover .frame img, .frame:hover img { transform: scale(1.035); }
 .mobile-cta { display: none; }
 @media (max-width: 760px) {
   .mobile-cta { display: flex; position: fixed; inset: auto 0 0 0; z-index: 40; padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom)); background: rgba(246, 242, 234, 0.94); backdrop-filter: blur(12px); border-top: 1px solid var(--line); }
-  .mobile-cta .btn { width: 100%; }
+  .mobile-cta { gap: 10px; } .mobile-cta .btn { flex: 1; padding: 0 12px; }
   body { padding-bottom: 72px; }
 }
 
@@ -250,3 +245,26 @@ a:hover .frame img, .frame:hover img { transform: scale(1.035); }
   *, *::before, *::after { animation: none !important; transition-duration: 0.01ms !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* Promesses : stima gratuita / acquisti a domicilio */
+.promise { display: grid; grid-template-columns: 5fr 6fr; gap: clamp(32px, 6vw, 96px); align-items: center; }
+.promise + .promise { margin-top: clamp(64px, 9vw, 120px); }
+.promise--flip { grid-template-columns: 6fr 5fr; }
+.promise--flip .split-media { order: 2; }
+.promise .frame { aspect-ratio: 4 / 5; }
+.promise-text h3 { font-size: clamp(2rem, 3.6vw, 3rem); margin-bottom: 24px; color: var(--ink); }
+.promise-text p { font-size: 1.125rem; color: var(--muted); }
+@media (max-width: 860px) { .promise, .promise--flip { grid-template-columns: 1fr; } .promise--flip .split-media { order: 0; } .promise .frame { aspect-ratio: 4 / 3; } }
+
+/* Contact cards */
+.contact-cards { display: grid; gap: 20px; }
+.contact-tile { display: grid; grid-template-columns: 56px 1fr auto; gap: 20px; align-items: center; padding: 28px clamp(20px, 3vw, 36px); background: var(--paper); border: 1px solid var(--line); position: relative; transition: border-color 0.35s var(--ease), transform 0.35s var(--ease); }
+.contact-tile:hover { border-color: var(--gold); transform: translateY(-2px); }
+.contact-tile .ico { width: 56px; height: 56px; display: grid; place-items: center; border: 1px solid var(--gold); color: var(--gold-d); }
+.contact-tile .ico svg { width: 24px; height: 24px; }
+.contact-tile small { display: block; font: 600 0.7rem/1 var(--sans); letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-d); margin-bottom: 8px; }
+.contact-tile strong { font: 500 clamp(1.4rem, 2.6vw, 2rem)/1.15 var(--serif); overflow-wrap: anywhere; }
+.contact-tile .go { width: 20px; height: 20px; transition: transform 0.35s var(--ease); }
+.contact-tile:hover .go { transform: translateX(5px); }
+.contact-note { margin: 4px 0 0; font-size: 0.95rem; color: var(--muted); }
+@media (max-width: 520px) { .contact-tile { grid-template-columns: 44px 1fr; } .contact-tile .go { display: none; } .contact-tile .ico { width: 44px; height: 44px; } }

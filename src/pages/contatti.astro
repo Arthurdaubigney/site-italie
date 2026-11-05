@@ -1,24 +1,24 @@
 ---
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
-import TallyForm from '../components/TallyForm.astro';
+import ContactBlock from '../components/ContactBlock.astro';
 import { SITE } from '../data/site';
 ---
 <Base
   title="Contatti e Richiesta Stima Gratuita | Galleria Antica Milano"
-  description="Contatta la Galleria Antica di Milano: richiedi una stima gratuita di opere d’arte e antiquariato compilando il modulo. Ritiro a domicilio in Lombardia."
+  description="Contatta la Galleria Antica di Milano: richiedi una stima gratuita di opere d’arte e antiquariato chiamando o scrivendo. Ritiro a domicilio in Lombardia."
   ogImage="gallery-wall"
   crumbs={[{ name: 'Contatti', href: '/contatti' }]}
 >
   <PageHero
     h1="Contatti: richiedi una stima gratuita alla Galleria Antica di Milano"
-    lead="Compila il modulo allegando alcune fotografie: ti risponderemo con una prima valutazione, gratuita e senza impegno."
+    lead="Chiamaci o scrivici allegando alcune fotografie: ti risponderemo con una prima valutazione, gratuita e senza impegno."
     eyebrow="Contatti"
     crumbs={[{ name: 'Contatti' }]}
   />
   <section class="section">
     <div class="wrap contact-grid">
-      <div class="reveal"><TallyForm id="stima" /></div>
+      <div class="reveal" id="stima"><ContactBlock /></div>
       <aside class="contact-card reveal" aria-label="Recapiti">
         <h2>Galleria Antica</h2>
         <dl>

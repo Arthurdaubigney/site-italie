@@ -119,13 +119,13 @@ const year = new Date().getFullYear();
           </div>
         </div>
         <div class="footer-bottom">
-          <span>© {year} {SITE.legalName} · Milano · P.IVA: da completare</span>
+          <span>© {year} {SITE.legalName} · Milano</span>
           <span><a href="/privacy">Privacy &amp; Cookie</a> · Fotografie: Unsplash (licenza libera)</span>
         </div>
       </div>
     </footer>
 
-    <div class="mobile-cta"><Cta label="Richiedi una stima gratuita" /></div>
+    <div class="mobile-cta"><a class="btn btn--gold" href={`tel:${SITE.phone.replace(/\s/g, '')}`}>Chiama ora</a><Cta label="Stima gratuita" /></div>
 
     <script is:inline>
       (function () {

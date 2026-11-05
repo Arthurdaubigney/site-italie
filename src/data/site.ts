@@ -6,17 +6,14 @@ export const SITE = {
   name: 'Galleria Antica',
   legalName: 'Galleria Antica S.r.l.',
   // À COMPLÉTER : domaine définitif (utilisé pour canonical, sitemap, Open Graph, JSON-LD)
-  url: 'https://www.galleriaantica.it',
+  url: 'https://www.galleria-antica.it',
   locale: 'it_IT',
   city: 'Milano',
   region: 'Lombardia',
-  // À COMPLÉTER : coordonnées réelles
-  email: 'info@galleriaantica.it',
-  phone: '' as string,
+  email: 'info@galleria-antica.it',
+  phone: '+39 351 472 4339',
   address: 'Quadrilatero della Moda, Milano',
   hours: 'Su appuntamento',
-  // ID du formulaire Tally : variable PUBLIC_TALLY_FORM_ID (.env) ou valeur ici
-  tallyFormId: import.meta.env.PUBLIC_TALLY_FORM_ID || '',
 };
 
 export const NAV = [
@@ -28,7 +25,7 @@ export const NAV = [
 ];
 
 export const CTA = {
-  stima: { href: '/contatti#stima', label: 'Richiedi una stima gratuita' },
+  stima: { href: '/contatti', label: 'Richiedi una stima gratuita' },
   valutazione: { href: '/stima-perizie-opere-d-arte', label: 'Valutazione opere' },
   contatta: { href: '/contatti', label: 'Contatta la Galleria' },
 };
@@ -62,13 +59,13 @@ export const CATEGORIES: Category[] = [
     lead: 'Paesaggi, ritratti, scene di genere e soggetti sacri: la Galleria seleziona e valuta dipinti antichi con occhio attento a qualità, stato di conservazione e provenienza.',
     body: [
       'Un dipinto antico racconta un’epoca, una bottega, un gusto. Per questo la valutazione parte sempre dall’opera: supporto, tecnica, cornice, eventuali restauri e documentazione disponibile.',
-      'Se possiedi un quadro ereditato o acquistato in passato e vuoi conoscerne il valore, puoi inviarci alcune fotografie tramite il modulo: ti risponderemo con una prima indicazione e, se l’opera è interessante, fisseremo una visita.',
+      'Se possiedi un quadro ereditato o acquistato in passato e vuoi conoscerne il valore, puoi inviarci alcune fotografie via email o telefonarci: ti risponderemo con una prima indicazione e, se l’opera è interessante, fisseremo una visita.',
     ],
     items: ['Olii su tela e su tavola', 'Paesaggi e vedute', 'Ritratti e scene di genere', 'Soggetti sacri e storici', 'Cornici antiche'],
     faq: [
       {
         q: 'Come posso sapere se il mio dipinto ha valore?',
-        a: 'Invia fotografie del fronte, del retro e dei dettagli (firma, cornice, etichette) tramite il modulo di stima. Una prima valutazione è gratuita e senza impegno.',
+        a: 'Invia fotografie del fronte, del retro e dei dettagli (firma, cornice, etichette) via email. Una prima valutazione è gratuita e senza impegno.',
       },
       {
         q: 'Acquistate anche dipinti non firmati?',
