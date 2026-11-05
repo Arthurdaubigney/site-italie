@@ -1,0 +1,143 @@
+---
+import Base from '../layouts/Base.astro';
+import Img from '../components/Img.astro';
+import Cta from '../components/Cta.astro';
+import Faq from '../components/Faq.astro';
+import TallyForm from '../components/TallyForm.astro';
+import { CATEGORIES, FAQ_HOME, ZONES } from '../data/site';
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_HOME.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<Base
+  title="Galleria d’Antiquariato a Milano | Stima e Acquisto Opere"
+  description="Galleria d’antiquariato a Milano: stima gratuita, perizie e acquisto di dipinti, mobili antichi, argenti e opere d’arte. Ritiro a domicilio in Lombardia."
+  jsonLd={[faqLd]}
+>
+  <section class="hero">
+    <div class="hero-media">
+      <Img name="gallery-wall" eager sizes="100vw" alt="Parete di una galleria d’arte con dipinti antichi in cornici dorate su tappezzeria rossa" title="Galleria d’antiquariato a Milano – dipinti antichi in cornice" />
+    </div>
+    <div class="wrap">
+      <span class="eyebrow">Antiquariato · Milano</span>
+      <h1>Galleria d’Antiquariato a Milano: <em>stima, perizie</em> e acquisto di opere d’arte</h1>
+      <p class="lead">Acquistiamo, valutiamo e vendiamo dipinti, mobili antichi, argenti, bronzi e oggetti da collezione di pregio. Con discrezione, competenza e ritiro a domicilio.</p>
+      <div class="actions">
+        <Cta variant="gold" href="#stima" />
+        <Cta kind="valutazione" variant="ghost-light" />
+      </div>
+      <ul class="hero-facts">
+        <li>Stima gratuita</li>
+        <li>Ritiro a domicilio</li>
+        <li>Lombardia e Nord Italia</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="servizi-t">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">I nostri servizi</span>
+        <h2 id="servizi-t">Dall’opera ereditata al pezzo da collezione</h2>
+      </div>
+      <ol class="services reveal">
+        <li class="service"><span class="num">01</span><h3>Acquisto</h3><p>Acquistiamo opere d’arte, antiquariato e collezioni, anche in blocco, con pagamento tracciabile.</p></li>
+        <li class="service"><span class="num">02</span><h3>Stima e perizia</h3><p>Valutazione gratuita su fotografie e perizia in presenza per i pezzi di maggior interesse.</p></li>
+        <li class="service"><span class="num">03</span><h3>Ritiro a domicilio</h3><p>Sopralluogo, imballaggio e trasporto in sicurezza in tutta la Lombardia e nel Nord Italia.</p></li>
+        <li class="service"><span class="num">04</span><h3>Vendita</h3><p>Una selezione di opere e arredi scelti per qualità, stato di conservazione e storia.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--paper" id="collezioni" aria-labelledby="coll-t">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Collezioni</span>
+        <h2 id="coll-t">Ciò che acquistiamo e vendiamo</h2>
+        <p class="lead">Sei grandi famiglie di oggetti, trattate con lo stesso rigore: dai dipinti ai tappeti, dagli argenti agli orologi.</p>
+      </div>
+      <div class="cards">
+        {CATEGORIES.map((c, i) => (
+          <a class="card reveal" style={`--d:${(i % 3) * 0.08}s`} href={`/collezioni/${c.slug}`}>
+            <div class="frame"><Img name={c.image} alt={c.alt} title={c.name} /></div>
+            <h3>{c.name}</h3>
+            <p>{c.short}</p>
+            <span class="link">Scopri</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="vendi-t">
+    <div class="wrap split">
+      <div class="split-media split-media--wide reveal">
+        <div class="frame"><Img name="hall" sizes="(min-width: 860px) 50vw, 100vw" alt="Sala di una galleria d’arte luminosa con opere alle pareti" title="Spazio espositivo di una galleria d’arte" /></div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Vendi con noi</span>
+        <h2 id="vendi-t">Vendere antiquariato a Milano, in tre passi</h2>
+        <ol class="steps">
+          <li><div><strong>Invia le fotografie</strong><span>Compila il modulo allegando foto dell’opera, dei dettagli e delle firme.</span></div></li>
+          <li><div><strong>Ricevi la stima</strong><span>Ti rispondiamo con una prima valutazione gratuita e, se serve, fissiamo una visita.</span></div></li>
+          <li><div><strong>Ritiro e pagamento</strong><span>Se accetti la proposta, ritiriamo l’opera a domicilio e concordiamo il pagamento.</span></div></li>
+        </ol>
+        <div class="actions"><Cta variant="default" href="/acquisto-antiquariato" label="Come vendere alla Galleria" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy" aria-labelledby="perizie-t">
+    <div class="wrap split split--flip">
+      <div class="split-media reveal">
+        <div class="frame"><Img name="books" sizes="(min-width: 860px) 50vw, 100vw" alt="Scaffali con libri antichi rilegati in pelle illuminati da luce calda" title="Libri e oggetti antichi da periziare" /></div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Stime e perizie</span>
+        <h2 id="perizie-t">Un parere competente, prima di ogni decisione</h2>
+        <p>Valore, autenticità, epoca, stato di conservazione: ogni opera viene osservata con attenzione, confrontata e spiegata con chiarezza. Una stima onesta è il primo passo per vendere, assicurare o dividere un’eredità.</p>
+        <ul class="ticks">
+          <li>Stime per vendita, assicurazione e successione</li>
+          <li>Analisi di firme, punzoni, supporti e cornici</li>
+          <li>Massima riservatezza su persone e collezioni</li>
+        </ul>
+        <div class="actions"><Cta kind="valutazione" variant="gold" label="Scopri stime e perizie" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="zone-t">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Dove operiamo</span>
+        <h2 id="zone-t">Da Milano in tutto il Nord Italia</h2>
+        <p class="lead">Veniamo noi da te: sopralluogo, stima e ritiro a domicilio senza che tu debba muovere nulla.</p>
+      </div>
+      <ul class="zones reveal">{ZONES.map((z) => <li>{z}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="section section--paper" aria-labelledby="faq-t">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Domande frequenti</span>
+        <h2 id="faq-t">Le risposte che cerchi</h2>
+      </div>
+      <div class="reveal"><Faq items={FAQ_HOME} /></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="stima-t">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Richiedi una stima</span>
+        <h2 id="stima-t">Raccontaci della tua opera</h2>
+        <p class="lead" style="margin-inline:auto">Bastano pochi minuti. Rispondiamo a ogni richiesta con una prima indicazione gratuita.</p>
+      </div>
+      <div class="reveal" style="max-width:860px;margin-inline:auto"><TallyForm id="stima" /></div>
+    </div>
+  </section>
+</Base>

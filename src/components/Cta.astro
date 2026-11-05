@@ -1,0 +1,11 @@
+---
+import { CTA } from '../data/site';
+interface Props { kind?: keyof typeof CTA; variant?: 'default' | 'gold' | 'ghost' | 'ghost-light'; href?: string; label?: string; small?: boolean; }
+const { kind = 'stima', variant = 'default', href, label, small = false } = Astro.props;
+const c = CTA[kind];
+const cls = ['btn', variant !== 'default' && `btn--${variant}`, small && 'btn--sm'].filter(Boolean).join(' ');
+---
+<a class={cls} href={href ?? c.href}>
+  {label ?? c.label}
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12h17m-6-6 6 6-6 6"/></svg>
+</a>

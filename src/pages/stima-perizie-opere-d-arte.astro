@@ -1,0 +1,79 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Img from '../components/Img.astro';
+import Cta from '../components/Cta.astro';
+import Faq from '../components/Faq.astro';
+import CtaBand from '../components/CtaBand.astro';
+const faq = [
+  { q: 'Quanto costa una stima?', a: 'La prima valutazione, a partire da fotografie, è gratuita e senza impegno. Eventuali perizie scritte specifiche (assicurazione, successione) vengono concordate prima.' },
+  { q: 'Che differenza c’è tra stima e perizia?', a: 'La stima indica un valore di mercato orientativo; la perizia è un’analisi approfondita in presenza dell’opera, con esame di materiali, autenticità e conservazione.' },
+  { q: 'Quali foto devo inviare?', a: 'Fronte e retro dell’opera, dettagli di firma, marchi o punzoni, cornice, eventuali etichette e difetti visibili, con luce naturale e senza filtri.' },
+  { q: 'La stima è valida per l’assicurazione?', a: 'Possiamo redigere valutazioni per uso assicurativo o ereditario: indicaci la finalità nel modulo e ti spiegheremo come procedere.' },
+];
+const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+---
+<Base
+  title="Stima e Perizia Opere d’Arte e Antiquariato a Milano"
+  description="Stima gratuita e perizia di dipinti, mobili antichi, argenti e opere d’arte a Milano. Valutazione su fotografie o in presenza, anche per eredità."
+  ogImage="books"
+  crumbs={[{ name: 'Stime e perizie', href: '/stima-perizie-opere-d-arte' }]}
+  jsonLd={[ld]}
+>
+  <PageHero
+    h1="Stima e perizia di opere d’arte e antiquariato a Milano"
+    lead="Scopri quanto vale un’opera prima di venderla, assicurarla o dividerla: una valutazione chiara, onesta e riservata."
+    eyebrow="Stime e perizie"
+    crumbs={[{ name: 'Stime e perizie' }]}
+  />
+
+  <section class="section">
+    <div class="wrap split split--flip">
+      <div class="split-media reveal"><div class="frame"><Img name="battle" sizes="(min-width: 860px) 50vw, 100vw" alt="Dipinto storico a olio con scena di battaglia e cavalieri" title="Dipinto storico sottoposto a perizia" /></div></div>
+      <div class="reveal">
+        <span class="eyebrow">Per ogni esigenza</span>
+        <h2>Quando serve una valutazione</h2>
+        <ul class="ticks">
+          <li><span><strong>Vendita:</strong> per conoscere il valore di mercato prima di decidere.</span></li>
+          <li><span><strong>Successione ed eredità:</strong> per dividere beni in modo equo e documentato.</span></li>
+          <li><span><strong>Assicurazione:</strong> per assicurare opere e arredi di pregio.</span></li>
+          <li><span><strong>Collezionismo:</strong> per capire autenticità, epoca e qualità di un pezzo.</span></li>
+        </ul>
+        <div class="actions"><Cta variant="default" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Prima di scrivere</span>
+        <h2>Cosa fotografare per la stima</h2>
+        <ul class="ticks">
+          <li>L’opera intera, di fronte e sul retro</li>
+          <li>Firme, marchi, punzoni, etichette e timbri</li>
+          <li>Cornice, supporto e dettagli di materiale</li>
+          <li>Eventuali difetti, restauri o danni</li>
+          <li>Misure e, se disponibili, documenti di provenienza</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Il metodo</span>
+        <h2>Dalla fotografia alla perizia</h2>
+        <ol class="steps">
+          <li><div><strong>Esame preliminare</strong><span>Valutiamo le fotografie e ti diamo un primo orientamento.</span></div></li>
+          <li><div><strong>Visita e perizia</strong><span>Per i pezzi interessanti, osserviamo l’opera dal vivo.</span></div></li>
+          <li><div><strong>Valutazione finale</strong><span>Ti spieghiamo il valore con chiarezza, senza impegno.</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head center reveal"><span class="eyebrow">Domande frequenti</span><h2>Stime e perizie: le risposte</h2></div>
+      <div class="reveal"><Faq items={faq} /></div>
+    </div>
+  </section>
+  <CtaBand title="Richiedi la tua stima gratuita" />
+</Base>

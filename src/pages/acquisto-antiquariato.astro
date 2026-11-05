@@ -1,0 +1,76 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Img from '../components/Img.astro';
+import Cta from '../components/Cta.astro';
+import Faq from '../components/Faq.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { ZONES } from '../data/site';
+const faq = [
+  { q: 'Quali oggetti acquistate?', a: 'Dipinti antichi e dell’Ottocento, mobili d’epoca, argenti, bronzi, sculture, orologi, tappeti, libri antichi e oggetti da collezione, anche in blocco.' },
+  { q: 'Devo portare io le opere in galleria?', a: 'No. Dopo la valutazione sulle fotografie possiamo organizzare un sopralluogo e il ritiro a domicilio in Lombardia e nel Nord Italia.' },
+  { q: 'Quanto tempo serve per ricevere una risposta?', a: 'Rispondiamo alle richieste di stima il prima possibile, di norma entro pochi giorni lavorativi.' },
+  { q: 'Posso vendere l’intera eredità di famiglia?', a: 'Sì, valutiamo anche interi nuclei ereditari, selezionando i pezzi di maggior interesse con discrezione e rispetto.' },
+];
+const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+---
+<Base
+  title="Vendere Antiquariato a Milano | Acquisto Opere d’Arte"
+  description="Vuoi vendere antiquariato a Milano? Acquistiamo dipinti, mobili antichi, argenti e opere d’arte: stima gratuita, ritiro a domicilio e pagamento tracciabile."
+  ogImage="hall"
+  crumbs={[{ name: 'Vendi con noi', href: '/acquisto-antiquariato' }]}
+  jsonLd={[ld]}
+>
+  <PageHero
+    h1="Vendere antiquariato a Milano: acquisto di mobili, dipinti e opere d’arte"
+    lead="Hai un’opera, un mobile o un’intera collezione da vendere? La Galleria acquista con competenza, trasparenza e la massima riservatezza."
+    eyebrow="Vendi con noi"
+    crumbs={[{ name: 'Vendi con noi' }]}
+  />
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Come funziona</span>
+        <h2>Un percorso semplice e trasparente</h2>
+        <ol class="steps">
+          <li><div><strong>Richiesta di stima</strong><span>Compila il modulo con fotografie e informazioni sull’opera: tecnica, misure, provenienza.</span></div></li>
+          <li><div><strong>Prima valutazione gratuita</strong><span>Ti indichiamo un orientamento di valore e, se l’opera è di interesse, proponiamo una visita.</span></div></li>
+          <li><div><strong>Perizia in presenza</strong><span>Esaminiamo l’opera dal vivo: materiali, stato di conservazione, firme, marchi.</span></div></li>
+          <li><div><strong>Proposta, ritiro e pagamento</strong><span>Se accetti, ritiriamo a domicilio e concordiamo un pagamento tracciabile.</span></div></li>
+        </ol>
+        <div class="actions"><Cta variant="default" /></div>
+      </div>
+      <div class="split-media reveal"><div class="frame"><Img name="vitrines" sizes="(min-width: 860px) 50vw, 100vw" alt="Sala museale con vetrine illuminate che espongono oggetti d’arte antichi" title="Oggetti d’arte antichi esposti in vetrina" /></div></div>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Cosa acquistiamo</span>
+        <h2>Dagli arredi ai dipinti, dalle collezioni alle eredità</h2>
+      </div>
+      <ul class="ticks ticks--cols reveal">
+        <li>Dipinti antichi e dell’Ottocento</li>
+        <li>Mobili e arredi d’epoca</li>
+        <li>Argenti, bronzi e sculture</li>
+        <li>Orologi e oggetti da collezione</li>
+        <li>Tappeti, arazzi e tessili antichi</li>
+        <li>Libri antichi, stampe e incisioni</li>
+        <li>Intere collezioni ed eredità</li>
+        <li>Svuotamento di ville e appartamenti d’epoca</li>
+      </ul>
+      <h3 style="margin-top:56px" class="reveal">Ritiro a domicilio nelle zone</h3>
+      <ul class="zones reveal">{ZONES.map((z) => <li>{z}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head center reveal"><span class="eyebrow">Domande frequenti</span><h2>Vendere alla Galleria: le risposte</h2></div>
+      <div class="reveal"><Faq items={faq} /></div>
+    </div>
+  </section>
+  <CtaBand title="Pronto a far valutare le tue opere?" />
+</Base>

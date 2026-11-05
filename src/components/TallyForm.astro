@@ -1,0 +1,25 @@
+---
+/**
+ * Conteneur responsive du formulaire Tally (stima / contatto).
+ * Renseigner l'ID du formulaire via PUBLIC_TALLY_FORM_ID (.env) ou SITE.tallyFormId.
+ * Tant que l'ID est vide, un espace réservé élégant est affiché.
+ */
+import { SITE } from '../data/site';
+interface Props { id?: string; formId?: string; title?: string; }
+const { id = 'stima', formId = SITE.tallyFormId, title = 'Richiedi una stima gratuita' } = Astro.props;
+const src = formId ? `https://tally.so/embed/${formId}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1` : '';
+---
+<div class="tally" id={id}>
+  {src ? (
+    <iframe data-tally-src={src} loading="lazy" title={title} width="100%" height="560"></iframe>
+    <script is:inline src="https://tally.so/widgets/embed.js" async onload="Tally.loadEmbeds()"></script>
+  ) : (
+    <div class="tally-placeholder">
+      <div>
+        <strong>{title}</strong>
+        <p>Qui comparirà il modulo Tally.<br />Imposta <code>PUBLIC_TALLY_FORM_ID</code> nel file <code>.env</code> (o in <code>src/data/site.ts</code>).</p>
+      </div>
+    </div>
+  )}
+  <noscript><p>Per richiedere una stima scrivici a <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p></noscript>
+</div>

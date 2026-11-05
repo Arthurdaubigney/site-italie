@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import TallyForm from '../components/TallyForm.astro';
+import { SITE } from '../data/site';
+---
+<Base
+  title="Contatti e Richiesta Stima Gratuita | Galleria Antica Milano"
+  description="Contatta la Galleria Antica di Milano: richiedi una stima gratuita di opere d’arte e antiquariato compilando il modulo. Ritiro a domicilio in Lombardia."
+  ogImage="gallery-wall"
+  crumbs={[{ name: 'Contatti', href: '/contatti' }]}
+>
+  <PageHero
+    h1="Contatti: richiedi una stima gratuita alla Galleria Antica di Milano"
+    lead="Compila il modulo allegando alcune fotografie: ti risponderemo con una prima valutazione, gratuita e senza impegno."
+    eyebrow="Contatti"
+    crumbs={[{ name: 'Contatti' }]}
+  />
+  <section class="section">
+    <div class="wrap contact-grid">
+      <div class="reveal"><TallyForm id="stima" /></div>
+      <aside class="contact-card reveal" aria-label="Recapiti">
+        <h2>Galleria Antica</h2>
+        <dl>
+          <div><dt>Sede</dt><dd>{SITE.address}</dd></div>
+          <div><dt>Orari</dt><dd>{SITE.hours}</dd></div>
+          <div><dt>Email</dt><dd><a href={`mailto:${SITE.email}`}>{SITE.email}</a></dd></div>
+          {SITE.phone && <div><dt>Telefono</dt><dd><a href={`tel:${SITE.phone.replace(/\s/g, '')}`}>{SITE.phone}</a></dd></div>}
+          <div><dt>Zone servite</dt><dd>Milano, Lombardia e Nord Italia, con ritiro a domicilio.</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import { SITE } from '../data/site';
+---
+<Base title="Privacy e Cookie | Galleria Antica Milano" description="Informativa sul trattamento dei dati personali e sui cookie del sito della Galleria Antica S.r.l. di Milano." noindex>
+  <PageHero h1="Privacy e cookie" crumbs={[{ name: 'Privacy' }]} />
+  <section class="section">
+    <div class="wrap prose">
+      <p><strong>Bozza da completare con il proprio consulente legale prima della pubblicazione.</strong></p>
+      <h2>Titolare del trattamento</h2>
+      <p>{SITE.legalName}, Milano. Contatto: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+      <h2>Dati raccolti</h2>
+      <p>I dati inviati tramite il modulo di contatto (nome, recapiti, fotografie e descrizione delle opere) sono trattati unicamente per rispondere alla richiesta di stima. Il modulo è fornito da Tally (tally.so).</p>
+      <h2>Cookie</h2>
+      <p>Il sito non utilizza cookie di profilazione. Il modulo Tally incorporato può impostare cookie tecnici propri.</p>
+      <h2>Diritti</h2>
+      <p>Puoi esercitare i diritti previsti dal GDPR (accesso, rettifica, cancellazione) scrivendo all’indirizzo indicato sopra.</p>
+    </div>
+  </section>
+</Base>

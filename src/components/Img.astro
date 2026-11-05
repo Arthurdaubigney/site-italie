@@ -1,0 +1,19 @@
+---
+import dims from '../data/images.json';
+interface Props { name: keyof typeof dims | string; alt: string; title?: string; sizes?: string; eager?: boolean; class?: string; }
+const { name, alt, title = alt, sizes = '(min-width: 900px) 33vw, 100vw', eager = false, class: cls } = Astro.props;
+const [w, h] = (dims as Record<string, number[]>)[name];
+---
+<img
+  src={`/img/${name}-1400.webp`}
+  srcset={`/img/${name}-640.webp 640w, /img/${name}-1400.webp 1400w`}
+  sizes={sizes}
+  width={w}
+  height={h}
+  alt={alt}
+  title={title}
+  loading={eager ? 'eager' : 'lazy'}
+  decoding={eager ? 'sync' : 'async'}
+  fetchpriority={eager ? 'high' : 'auto'}
+  class={cls}
+/>

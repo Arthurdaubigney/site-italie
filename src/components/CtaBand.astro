@@ -1,0 +1,16 @@
+---
+import Cta from './Cta.astro';
+interface Props { title?: string; text?: string; href?: string; }
+const { title = 'Hai un’opera da far valutare?', text = 'Invia alcune fotografie: ti risponderemo con una prima indicazione, gratuitamente e senza impegno.', href } = Astro.props;
+---
+<section class="section section--navy cta-band">
+  <div class="wrap reveal">
+    <span class="eyebrow">Stima gratuita</span>
+    <h2>{title}</h2>
+    <p>{text}</p>
+    <div class="actions">
+      <Cta variant="gold" href={href} />
+      <Cta kind="contatta" variant="ghost-light" />
+    </div>
+  </div>
+</section>

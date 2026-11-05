@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import Cta from '../components/Cta.astro';
+---
+<Base title="Pagina non trovata | Galleria Antica Milano" description="La pagina cercata non esiste. Torna alla home della Galleria Antica di Milano." noindex>
+  <section class="section"><div class="wrap" style="text-align:center;min-height:50vh;display:grid;place-content:center;gap:24px">
+    <h1>Pagina non trovata</h1>
+    <p class="lead">Il link potrebbe essere errato o la pagina spostata.</p>
+    <div class="actions" style="justify-content:center"><Cta variant="default" href="/" label="Torna alla home" /></div>
+  </div></section>
+</Base>
