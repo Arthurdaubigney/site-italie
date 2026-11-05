@@ -74,7 +74,7 @@ const faqLd = {
           <p>Acquistiamo i tuoi oggetti direttamente a casa tua, con la massima discrezione e trasparenza.</p>
           <p>Ogni offerta è formulata con cura, in base al valore reale dei tuoi beni, per garantirti una transazione giusta, rapida e di fiducia.</p>
           <p>La nostra priorità è offrirti un servizio affidabile, semplice e adatto alle tue esigenze.</p>
-          <div class="actions"><Cta variant="default" href="/acquisto-antiquariato" label="Come funziona" /></div>
+          <div class="actions"><Cta variant="default" href="/acquisto-antiquariato/" label="Come funziona" /></div>
         </div>
       </article>
     </div>
@@ -89,7 +89,7 @@ const faqLd = {
       </div>
       <div class="cards">
         {CATEGORIES.map((c, i) => (
-          <a class="card reveal" style={`--d:${(i % 3) * 0.08}s`} href={`/collezioni/${c.slug}`}>
+          <a class="card reveal" style={`--d:${(i % 3) * 0.08}s`} href={`/collezioni/${c.slug}/`}>
             <div class="frame"><Img name={c.image} alt={c.alt} title={c.name} /></div>
             <h3>{c.name}</h3>
             <p>{c.short}</p>
@@ -113,7 +113,7 @@ const faqLd = {
           <li><div><strong>Ricevi la stima</strong><span>Ti rispondiamo con una prima valutazione gratuita e, se serve, fissiamo una visita.</span></div></li>
           <li><div><strong>Ritiro e pagamento</strong><span>Se accetti la proposta, ritiriamo l’opera a domicilio e concordiamo il pagamento.</span></div></li>
         </ol>
-        <div class="actions"><Cta variant="default" href="/acquisto-antiquariato" label="Come vendere alla Galleria" /></div>
+        <div class="actions"><Cta variant="default" href="/acquisto-antiquariato/" label="Come vendere alla Galleria" /></div>
       </div>
     </div>
   </section>

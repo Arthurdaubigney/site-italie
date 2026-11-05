@@ -17,17 +17,17 @@ export const SITE = {
 };
 
 export const NAV = [
-  { href: '/collezioni', label: 'Collezioni' },
-  { href: '/acquisto-antiquariato', label: 'Vendi con noi' },
-  { href: '/stima-perizie-opere-d-arte', label: 'Stime e perizie' },
-  { href: '/la-galleria', label: 'La Galleria' },
-  { href: '/contatti', label: 'Contatti' },
+  { href: '/collezioni/', label: 'Collezioni' },
+  { href: '/acquisto-antiquariato/', label: 'Vendi con noi' },
+  { href: '/stima-perizie-opere-d-arte/', label: 'Stime e perizie' },
+  { href: '/la-galleria/', label: 'La Galleria' },
+  { href: '/contatti/', label: 'Contatti' },
 ];
 
 export const CTA = {
-  stima: { href: '/contatti', label: 'Richiedi una stima gratuita' },
-  valutazione: { href: '/stima-perizie-opere-d-arte', label: 'Valutazione opere' },
-  contatta: { href: '/contatti', label: 'Contatta la Galleria' },
+  stima: { href: '/contatti/', label: 'Richiedi una stima gratuita' },
+  valutazione: { href: '/stima-perizie-opere-d-arte/', label: 'Valutazione opere' },
+  contatta: { href: '/contatti/', label: 'Contatta la Galleria' },
 };
 
 export type Category = {

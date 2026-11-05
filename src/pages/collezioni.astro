@@ -8,7 +8,7 @@ import { CATEGORIES } from '../data/site';
 <Base
   title="Collezioni di Antiquariato e Opere d’Arte | Milano"
   description="Le collezioni della Galleria Antica di Milano: dipinti antichi, mobili, argenti e bronzi, orologi, tappeti e sculture. Stima e acquisto con ritiro a domicilio."
-  crumbs={[{ name: 'Collezioni', href: '/collezioni' }]}
+  crumbs={[{ name: 'Collezioni', href: '/collezioni/' }]}
   ogImage="vitrines"
 >
   <PageHero
@@ -20,7 +20,7 @@ import { CATEGORIES } from '../data/site';
   <section class="section">
     <div class="wrap cards">
       {CATEGORIES.map((c, i) => (
-        <a class="card reveal" style={`--d:${(i % 3) * 0.08}s`} href={`/collezioni/${c.slug}`}>
+        <a class="card reveal" style={`--d:${(i % 3) * 0.08}s`} href={`/collezioni/${c.slug}/`}>
           <div class="frame"><Img name={c.image} alt={c.alt} title={c.name} /></div>
           <h2 style="font-size:1.75rem;margin-bottom:8px">{c.name}</h2>
           <p>{c.short}</p>

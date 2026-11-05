@@ -18,8 +18,8 @@ const faqLd = {
   mainEntity: c.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
 };
 ---
-<Base title={c.title} description={c.description} ogImage={c.image} crumbs={[{ name: 'Collezioni', href: '/collezioni' }, { name: c.name, href: `/collezioni/${c.slug}` }]} jsonLd={[faqLd]}>
-  <PageHero h1={c.h1} lead={c.lead} eyebrow="Collezioni" crumbs={[{ name: 'Collezioni', href: '/collezioni' }, { name: c.name }]} />
+<Base title={c.title} description={c.description} ogImage={c.image} crumbs={[{ name: 'Collezioni', href: '/collezioni/' }, { name: c.name, href: `/collezioni/${c.slug}/` }]} jsonLd={[faqLd]}>
+  <PageHero h1={c.h1} lead={c.lead} eyebrow="Collezioni" crumbs={[{ name: 'Collezioni', href: '/collezioni/' }, { name: c.name }]} />
 
   <section class="section">
     <div class="wrap split">
@@ -45,7 +45,7 @@ const faqLd = {
       <div class="section-head reveal"><span class="eyebrow">Altre collezioni</span><h2>Continua a esplorare</h2></div>
       <div class="cards">
         {others.map((o) => (
-          <a class="card reveal" href={`/collezioni/${o.slug}`}>
+          <a class="card reveal" href={`/collezioni/${o.slug}/`}>
             <div class="frame"><Img name={o.image} alt={o.alt} title={o.name} /></div>
             <h3>{o.name}</h3><p>{o.short}</p><span class="link">Scopri</span>
           </a>
