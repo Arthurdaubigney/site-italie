@@ -97,7 +97,7 @@ em.gold { font-style: italic; color: var(--gold); }
 .burger[aria-expanded='true'] span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
 .burger[aria-expanded='true'] span:nth-child(2) { opacity: 0; }
 .burger[aria-expanded='true'] span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
-@media (max-width: 1180px) {
+@media (max-width: 1279px) {
   .burger { display: block; }
   .nav { position: fixed; inset: var(--header-h) 0 auto 0; flex-direction: column; align-items: stretch; gap: 0; padding: 12px var(--gutter) 32px; background: var(--ivory); border-bottom: 1px solid var(--line); max-height: calc(100dvh - var(--header-h)); overflow: auto; opacity: 0; visibility: hidden; transform: translateY(-12px); transition: opacity 0.35s var(--ease), transform 0.35s var(--ease), visibility 0.35s; }
   .nav.is-open { opacity: 1; visibility: visible; transform: none; }
@@ -270,15 +270,19 @@ a:hover .frame img, .frame:hover img { transform: scale(1.035); }
 @media (max-width: 520px) { .contact-tile { grid-template-columns: 44px 1fr; } .contact-tile .go { display: none; } .contact-tile .ico { width: 44px; height: 44px; } }
 
 /* Téléphone dans le bandeau */
-.nav-tel { gap: 10px; letter-spacing: 0.08em; }
-.nav-tel svg { width: 16px; height: 16px; }
-.nav-tel:hover svg { transform: none; }
-.nav-cta, .tel-icon { display: none; }
-@media (max-width: 1180px) {
+.nav a.nav-tel { display: inline-flex; align-items: center; gap: 8px; font: 600 0.8125rem/1 var(--sans); letter-spacing: 0.06em; white-space: nowrap; color: var(--ink); }
+.nav-tel svg { width: 16px; height: 16px; color: var(--gold-d); flex: none; }
+.nav a.nav-tel::after { display: none; }
+.nav a.nav-tel:hover { color: var(--gold-d); }
+.nav-cta { display: block; }
+.tel-icon { display: none; }
+@media (min-width: 1280px) { .nav { gap: 22px; } .brand { margin-right: 12px; } }
+@media (min-width: 1280px) and (max-width: 1400px) { .nav { gap: 16px; } .nav a:not(.btn):not(.nav-tel) { font-size: 0.75rem; letter-spacing: 0.08em; } }
+@media (max-width: 1279px) {
   .tel-icon { display: grid; place-items: center; width: 44px; height: 44px; margin-left: auto; border: 1px solid var(--gold); color: var(--gold-d); transition: background 0.3s, color 0.3s; }
   .tel-icon:hover { background: var(--gold); color: var(--navy); }
   .tel-icon svg { width: 20px; height: 20px; }
-  .nav-cta { display: block; } .nav-cta .btn { width: 100%; margin-top: 12px; }
-  .nav-tel { margin-top: 24px; }
+  .nav a.nav-tel { padding: 18px 0; border-bottom: 1px solid var(--line); font-size: 1rem; }
+  .nav-cta .btn { width: 100%; margin-top: 24px; }
 }
 @media (max-width: 380px) { .brand-text { font-size: 1.1rem; letter-spacing: 0.16em; } }
