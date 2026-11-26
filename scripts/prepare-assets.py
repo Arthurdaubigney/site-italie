@@ -22,6 +22,7 @@ PHOTOS = {
     "watch": "1509048191080-d2984bad6ae5",
     "carpet": "1600166898405-da9535204843",
     "chair": "1567538096630-e0c55bd6374c",
+    "fashion": "1445205170230-053b83016050",
 }
 dims = {}
 for name, pid in PHOTOS.items():

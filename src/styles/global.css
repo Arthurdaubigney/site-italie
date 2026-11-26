@@ -295,3 +295,4 @@ a:hover .frame img, .frame:hover img { transform: scale(1.035); }
 .italia .zones li:hover { border-color: var(--gold-lt); }
 .promise-text strong { color: var(--ink); }
 .italia h2 { margin-bottom: 24px; }
+.h2-like { font-size: clamp(2rem, 3.8vw, 3.2rem); }

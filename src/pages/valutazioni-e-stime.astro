@@ -6,30 +6,29 @@ import Cta from '../components/Cta.astro';
 import Faq from '../components/Faq.astro';
 import CtaBand from '../components/CtaBand.astro';
 const faq = [
-  { q: 'Quanto costa una stima?', a: 'La prima valutazione, a partire da fotografie, è gratuita e senza impegno. Eventuali perizie scritte specifiche (assicurazione, successione) vengono concordate prima.' },
-  { q: 'Che differenza c’è tra stima e perizia?', a: 'La stima indica un valore di mercato orientativo; la perizia è un’analisi approfondita in presenza dell’opera, con esame di materiali, autenticità e conservazione.' },
+  { q: 'Quanto costa una stima?', a: 'La prima valutazione, a partire da fotografie, è gratuita e senza impegno. Anche la visita a domicilio è gratuita; eventuali valutazioni scritte specifiche (assicurazione, successione) vengono concordate prima.' },
   { q: 'Quali foto devo inviare?', a: 'Fronte e retro dell’opera, dettagli di firma, marchi o punzoni, cornice, eventuali etichette e difetti visibili, con luce naturale e senza filtri.' },
   { q: 'La stima è valida per l’assicurazione?', a: 'Possiamo redigere valutazioni per uso assicurativo o ereditario: indicaci la finalità quando ci contatti e ti spiegheremo come procedere.' },
 ];
 const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
 ---
 <Base
-  title="Stima e Perizia Opere d’Arte e Antiquariato a Milano"
-  description="Stima gratuita e perizia di dipinti, mobili antichi, argenti e opere d’arte a Milano. Valutazione su fotografie o in presenza, anche per eredità."
+  title="Valutazioni e Stime di Opere d’Arte e Antiquariato"
+  description="Valutazione gratuita di dipinti, mobili antichi, argenti e opere d’arte. Stima su fotografie o a domicilio, anche per eredità e assicurazione."
   ogImage="books"
-  crumbs={[{ name: 'Stime e perizie', href: '/stima-perizie-opere-d-arte/' }]}
+  crumbs={[{ name: 'Valutazioni e stime', href: '/valutazioni-e-stime/' }]}
   jsonLd={[ld]}
 >
   <PageHero
-    h1="Stima e perizia di opere d’arte e antiquariato a Milano"
-    lead="Scopri quanto vale un’opera prima di venderla, assicurarla o dividerla: una valutazione chiara, onesta e riservata."
-    eyebrow="Stime e perizie"
-    crumbs={[{ name: 'Stime e perizie' }]}
+    h1="Valutazioni e stima di opere d’arte e antiquariato"
+    lead="Conoscere il valore di un’opera prima della vendita, dell’assicurazione o di una divisione patrimoniale: una valutazione chiara, onesta e riservata."
+    eyebrow="Valutazioni e stime"
+    crumbs={[{ name: 'Valutazioni e stime' }]}
   />
 
   <section class="section">
     <div class="wrap split split--flip">
-      <div class="split-media reveal"><div class="frame"><Img name="battle" sizes="(min-width: 860px) 50vw, 100vw" alt="Dipinto storico a olio con scena di battaglia e cavalieri" title="Dipinto storico sottoposto a perizia" /></div></div>
+      <div class="split-media reveal"><div class="frame"><Img name="battle" sizes="(min-width: 860px) 50vw, 100vw" alt="Dipinto storico a olio con scena di battaglia e cavalieri" title="Dipinto storico sottoposto a valutazione" /></div></div>
       <div class="reveal">
         <span class="eyebrow">Per ogni esigenza</span>
         <h2>Quando serve una valutazione</h2>
@@ -59,10 +58,10 @@ const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: f
       </div>
       <div class="reveal">
         <span class="eyebrow">Il metodo</span>
-        <h2>Dalla fotografia alla perizia</h2>
+        <h2>Dalla fotografia alla stima</h2>
         <ol class="steps">
           <li><div><strong>Esame preliminare</strong><span>Valutiamo le fotografie e ti diamo un primo orientamento.</span></div></li>
-          <li><div><strong>Visita e perizia</strong><span>Per i pezzi interessanti, osserviamo l’opera dal vivo.</span></div></li>
+          <li><div><strong>Visita e stima</strong><span>Per i pezzi interessanti, osserviamo l’opera dal vivo.</span></div></li>
           <li><div><strong>Valutazione finale</strong><span>Ti spieghiamo il valore con chiarezza, senza impegno.</span></div></li>
         </ol>
       </div>
@@ -71,7 +70,7 @@ const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: f
 
   <section class="section">
     <div class="wrap">
-      <div class="section-head center reveal"><span class="eyebrow">Domande frequenti</span><h2>Stime e perizie: le risposte</h2></div>
+      <div class="section-head center reveal"><span class="eyebrow">Domande frequenti</span><h2>Valutazioni e stime: le risposte</h2></div>
       <div class="reveal"><Faq items={faq} /></div>
     </div>
   </section>
