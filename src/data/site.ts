@@ -54,7 +54,7 @@ export const CATEGORIES: Category[] = [
     alt: 'Dipinto antico a olio raffigurante un paesaggio pastorale con alberi e gregge',
     title: 'Opere d’Arte e Sculture: Dipinti e Sculture Antiche',
     description:
-      'Valutiamo e acquistiamo dipinti antichi, sculture e opere d’arte tra Ottocento e Novecento. Valutazione gratuita e ritiro a domicilio in tutta Italia.',
+      'Valutiamo e acquistiamo dipinti antichi, sculture e opere d’arte tra Ottocento e Novecento. Valutazione gratuita e ritiro a domicilio in Lombardia.',
     h1: 'Opere d’arte e sculture: dipinti antichi, Ottocento e Novecento',
     lead: 'Paesaggi, ritratti, scene di genere, soggetti sacri, dipinti figurativi, sculture e opere d’arte tra Ottocento e Novecento, selezionati e valutati con attenzione alla qualità, allo stato di conservazione e alla provenienza di ogni pezzo.',
     body: [
@@ -93,7 +93,7 @@ export const CATEGORIES: Category[] = [
     alt: 'Poltroncina capitonné con gambe tornite, esempio di seduta di gusto classico',
     title: 'Mobili antichi: valutazione e acquisto a domicilio',
     description:
-      'Valutiamo e acquistiamo mobili antichi in tutta Italia: commode, consolle, tavoli, sedute e arredi d’epoca. Valutazione gratuita e ritiro a domicilio.',
+      'Valutiamo e acquistiamo mobili antichi in Lombardia: commode, consolle, tavoli, sedute e arredi d’epoca. Valutazione gratuita e ritiro a domicilio.',
     h1: 'Mobili antichi: valutazione, acquisto e vendita',
     lead: 'Commode, credenze, consolle, tavoli, sedute e arredi d’epoca: mobili che uniscono ebanisteria, materiali pregiati e carattere.',
     body: [
@@ -104,7 +104,7 @@ export const CATEGORIES: Category[] = [
     faq: [
       {
         q: 'Ritirate mobili ingombranti a domicilio?',
-        a: 'Sì, in tutta Italia. Dopo la valutazione concordiamo data, imballaggio e trasporto.',
+        a: 'Sì, in Lombardia. Dopo la valutazione concordiamo data, imballaggio e trasporto.',
       },
       {
         q: 'Un mobile restaurato mantiene valore?',
@@ -120,7 +120,7 @@ export const CATEGORIES: Category[] = [
     alt: 'Dettaglio di una scultura classica in marmo con volto e spalla in primo piano',
     title: 'Argenti e bronzi antichi: valutazione e acquisto',
     description:
-      'Compriamo e valutiamo argenti, bronzi e sculture antiche. Esame di punzoni e firme, valutazione gratuita e ritiro a domicilio in tutta Italia.',
+      'Compriamo e valutiamo argenti, bronzi e sculture antiche. Esame di punzoni e firme, valutazione gratuita e ritiro a domicilio in Lombardia.',
     h1: 'Argenti, bronzi e sculture antiche: valutazione e acquisto',
     lead: 'Argenteria da tavola, centrotavola, bronzi, marmi e sculture: oggetti in cui la materia e la mano dell’artigiano si leggono a colpo d’occhio.',
     body: [
@@ -147,7 +147,7 @@ export const CATEGORIES: Category[] = [
     alt: 'Orologio da tasca antico appeso a una catena con sfondo sfocato',
     title: 'Orologi e Gioielli Antichi: Valutazione e Acquisto',
     description:
-      'Valutiamo e acquistiamo orologi da tasca, gioielli, bigiotteria di valore e oggetti da collezione. Valutazione gratuita e ritiro a domicilio in tutta Italia.',
+      'Valutiamo e acquistiamo orologi da tasca, gioielli, bigiotteria di valore e oggetti da collezione. Valutazione gratuita e ritiro a domicilio in Lombardia.',
     h1: 'Orologi e gioielli: orologi da tasca, bigiotteria e oggetti da collezione',
     lead: 'Orologi da tasca, oggetti da collezione e curiosità d’epoca, bigiotteria e gioielli di valore: pezzi che il tempo ha reso preziosi.',
     body: [
@@ -181,7 +181,7 @@ export const CATEGORIES: Category[] = [
     alt: 'Tappeto antico arrotolato con motivi decorativi e frange',
     title: 'Tappeti antichi e tessili d’epoca: valutazione e acquisto',
     description:
-      'Valutazione e acquisto di tappeti antichi, arazzi e tessili d’epoca. Valutazione gratuita su fotografie e ritiro a domicilio in tutta Italia.',
+      'Valutazione e acquisto di tappeti antichi, arazzi e tessili d’epoca. Valutazione gratuita su fotografie e ritiro a domicilio in Lombardia.',
     h1: 'Tappeti antichi, arazzi e tessili d’epoca',
     lead: 'Tappeti orientali annodati a mano, arazzi e tessuti d’epoca: trame che uniscono arte decorativa e artigianato.',
     body: [
@@ -208,7 +208,7 @@ export const CATEGORIES: Category[] = [
     alt: 'Abiti e capispalla vintage appesi su una stanga in un negozio di moda d’epoca',
     title: 'Pellicce e Moda Vintage: Valutazione e Acquisto',
     description:
-      'Valutiamo e acquistiamo pellicce, abbigliamento vintage, capi firmati e accessori di moda d’epoca. Valutazione gratuita e ritiro a domicilio in tutta Italia.',
+      'Valutiamo e acquistiamo pellicce, abbigliamento vintage, capi firmati e accessori di moda d’epoca. Valutazione gratuita e ritiro a domicilio in Lombardia.',
     h1: 'Pellicce e moda vintage: valutazione e acquisto a domicilio',
     lead: 'Capi d’abbigliamento vintage, accessori e pezzi di moda d’epoca: cappotti, giacche e accessori in pelliccia, capi firmati e pezzi di stilisti.',
     body: [
@@ -247,7 +247,7 @@ export const FAQ_HOME = [
   },
   {
     q: 'Venite a casa a ritirare le opere?',
-    a: 'Sì, in tutta Italia, senza alcun costo di spostamento. Concordiamo giorno e orario, e ci occupiamo di imballaggio e trasporto in sicurezza.',
+    a: 'Sì, in Lombardia, senza alcun costo di spostamento. Concordiamo giorno e orario, e ci occupiamo di imballaggio e trasporto in sicurezza.',
   },
   {
     q: 'Come vengo pagato se vendo alla Galleria?',
@@ -259,4 +259,4 @@ export const FAQ_HOME = [
   },
 ];
 
-export const ZONES = ['Milano e Lombardia', 'Torino e Piemonte', 'Veneto e Triveneto', 'Emilia-Romagna e Toscana', 'Roma e Lazio', 'Sud Italia e Isole'];
+export const ZONES = ['Milano e provincia', 'Brianza e Como', 'Bergamo e Brescia', 'Pavia e Lodi', 'Varese e Lago Maggiore', 'Mantova e Cremona'];
